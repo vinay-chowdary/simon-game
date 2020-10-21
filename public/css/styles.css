@@ -1,0 +1,80 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(6, 0, 87);
+  color: #fff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.7rem;
+  height: 100vh;
+}
+#simon {
+  height: 100%;
+  display: grid;
+  align-items: flex-start;
+  justify-items: center;
+}
+.header {
+  align-self: center;
+  width: 80%;
+  text-align: center;
+}
+#simon .game {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.btn {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 20px;
+  border: none;
+}
+.btn:focus,
+.btn:active {
+  border: none;
+  outline: none;
+}
+.btn.active {
+  transform: scale(0.97);
+  opacity: 0.9;
+  box-shadow: 0px 0px 20px #fff;
+}
+.red {
+  background-color: rgb(255, 0, 0);
+}
+.blue {
+  background-color: rgb(128, 0, 128);
+}
+.green {
+  background-color: rgb(0, 128, 0);
+}
+.yellow {
+  background-color: rgb(255, 255, 0);
+}
+
+.computerPress {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+.wrong {
+  background-color: rgb(255, 0, 0);
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+  #simon .header {
+    margin: 3rem auto;
+  }
+  #simon .game {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
