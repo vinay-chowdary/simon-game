@@ -82,6 +82,8 @@ function validate(level) {
         }, 300);
         gameOver = true;
         started = false;
+        playBtn.disabled = false;
+
     }
 }
 
@@ -90,6 +92,17 @@ function validate(level) {
 document.addEventListener("keydown", () => {
     if (!started) {
         started = true;
+        reset();
+        logic();
+    }
+});
+
+//for mobile devices
+let playBtn = document.querySelector(".playBtn");
+playBtn.addEventListener("click", () => {
+    if (!started) {
+        started = true;
+        playBtn.disabled = true;
         reset();
         logic();
     }

@@ -66,7 +66,29 @@ body {
   opacity: 0.5;
 }
 
+.playBtn {
+  display: none;
+  width: 7rem;
+  padding: 0.8rem 0.3rem;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.playBtn:active {
+  transform: scale(0.95);
+}
 @media (max-width: 600px) {
+  .playBtn {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
   body {
     font-size: 1rem;
   }
@@ -76,5 +98,8 @@ body {
   #simon .game {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .playBtn {
+    margin: 2rem auto;
   }
 }
